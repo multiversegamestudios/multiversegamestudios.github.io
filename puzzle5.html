@@ -1,0 +1,254 @@
+<!doctype html>
+<html>
+<head>
+	<link rel="shortcut icon" href="Images/Main Images/Multiverse Icon.ico" >
+	<title>Multiverse Game Studios</title>
+	<link type="text/css" rel = "stylesheet" href = "stylesheet.css">
+	<script type="text/javascript">
+		function check_Answer()
+		{
+			var answer = "exoplanet";
+			if(prompt("Enter You Answer").toLowerCase() === answer){
+				window.location = "correct5.html";
+			}
+			else{
+				alert("Sorry! Wrong asnwer, try again!");
+			}		
+		}
+	</script>
+	<script type="text/javascript">
+		function MM_preloadImages()
+		{
+			var d=document; 
+			if(d.images)
+			{
+				if(!d.MM_p) 
+				{			
+					d.MM_p=new Array();
+					var i
+					var j=d.MM_p.length
+					var a=MM_preloadImages.arguments; 
+					for(i=0; i<a.length; i++)
+					{
+						if (a[i].indexOf("#")!=0)
+						{ 
+							d.MM_p[j]=new Image; 
+							d.MM_p[j++].src=a[i];
+						}
+					}
+				}
+			}
+		}
+	</script>
+	<script language="JavaScript">
+		if(document.images)
+		{
+			var pic1_init=new Image();
+			pic1_init.src="Images/Web Page Icons/Main Page Icon.png";
+			var pic1_new=new Image();
+			pic1_new.src="Images/Web Page Icons/Main Page Icon Down.gif";
+			
+			var pic2_init=new Image();
+			pic2_init.src="Images/Web Page Icons/Game Icon.png";
+			var pic2_new=new Image();
+			pic2_new.src="Images/Web Page Icons/Game Icon Down.gif";
+			
+			var pic3_init=new Image();
+			pic3_init.src="Images/Web Page Icons/Download Icon.png";
+			var pic3_new=new Image();
+			pic3_new.src="Images/Web Page Icons/Download Icon Down.gif";
+			
+			var pic4_init=new Image();
+			pic4_init.src="Images/Web Page Icons/Dev Blog Icon.png";
+			var pic4_new=new Image();
+			pic4_new.src="Images/Web Page Icons/Dev Blog Icon Down.gif";
+			
+			var pic5_init=new Image();
+			pic5_init.src="Images/Web Page Icons/Contact Us Icon.png";
+			var pic5_new=new Image();
+			pic5_new.src="Images/Web Page Icons/Contact Us Icon Down.gif";
+			
+			var pic6_init=new Image();
+			pic6_init.src="Images/Web Page Icons/About Us Icon.png";
+			var pic6_new=new Image();
+			pic6_new.src="Images/Web Page Icons/About Us Icon Down.gif";
+			
+			var pic7_init=new Image();
+			pic7_init.src="Images/Web Page Icons/YouTube Channel Icon.png";
+			var pic7_new=new Image();
+			pic7_new.src="Images/Web Page Icons/YouTube Channel Icon Down.gif";
+		}			
+
+		function text_out(the_name)
+		{
+			if(document.images)
+			{
+				document.images[the_name].src=eval(the_name+"_new.src");
+			}
+		}
+	
+		function text_in(the_name)
+		{
+			if(document.images)
+			{
+				document.images[the_name].src=eval(the_name+"_init.src");
+			}
+	
+		}
+	</script>
+	</head>
+	<body>
+		<div class="divs">
+			<table border="0">
+				<tr>
+					<td>
+						<img src="Images/Web Page Icons/Main Page Icon.png" alt="Home" name="pic1" id="pic1" border="0"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="Images/Web Page Icons/Game Icon.png" alt="Games" name="pic2" id="pic2" border="0"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="Images/Web Page Icons/Download Icon.png" alt="Downloads" name="pic3" id="pic3" border="0"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="Images/Web Page Icons/Dev Blog Icon.png" alt="Dev Blog" name="pic4" id="pic4" border="0"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="Images/Web Page Icons/YouTube Channel Icon.png" alt="You Tube Channel" name="pic7" id="pic7" border="0" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="Images/Web Page Icons/Contact Us Icon.png" alt="Contact Us" name="pic5" id="pic5" border="0"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="Images/Web Page Icons/About Us Icon.png" alt="About Us" name="pic6" id="pic6" border="0"/>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="divs" OnMouseOver="move_text_out()" onMouseOut="move_text_in()">
+			<table border="0" OnMouseOver="move_text_out()" onMouseOut="move_text_in()">
+				<tr>
+					<td>
+						<a href="index.html" onMouseOut="text_out('pic1')" OnMouseOver="text_in('pic1')"><img src="Images/Web Page Icons/Main Page Icon.png" alt="Home" name="pic1" id="pic1" border="0"/></a>
+					</td>
+					<td>
+						<a href="index.html" OnMouseOver="text_out('pic1')" onMouseOut="text_in('pic1')"><div id="Home"><p>Home</p></div></a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="games.html" OnMouseOver="text_out('pic2')" onMouseOut="text_in('pic2')"><img src="Images/Web Page Icons/Game Icon.png" alt="Games" name="pic2" id="pic2" border="0"/></a>
+					</td>
+					<td>
+						<a href="games.html" OnMouseOver="text_out('pic2')" onMouseOut="text_in('pic2')"><div id="Games"><p>Games</p></div></a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="downloads.html" OnMouseOver="text_out('pic3')" onMouseOut="text_in('pic3')"><img src="Images/Web Page Icons/Download Icon.png" alt="Downloads" name="pic3" id="pic3" border="0"/></a>
+					</td>
+					<td>
+						<a href="downloads.html" OnMouseOver="text_out('pic3')" onMouseOut="text_in('pic3')"><div id="Downloads"><p>Downloads</p></div></a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://multiversegamestudios.tumblr.com/" OnMouseOver="text_out('pic4')" onMouseOut="text_in('pic4')"><img src="Images/Web Page Icons/Dev Blog Icon.png" alt="Dev Blog" name="pic4" id="pic4" border="0"/></a>
+					</td>
+					<td>
+						<a href="http://multiversegamestudios.tumblr.com/" OnMouseOver="text_out('pic4')" onMouseOut="text_in('pic4')"><div id="Dev Blog"><p>Dev blog</p></div></a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="https://www.youtube.com/channel/UCa5UazrsIcN7i_MoLcdJMWQ" OnMouseOver="text_out('pic7')" onMouseOut="text_in('pic7')"><img src="Images/Web Page Icons/YouTube Channel Icon.png" alt="You Tube Channel" name="pic7" id="pic7" border="0" /></a>
+					</td>
+					<td>
+						<a href="https://www.youtube.com/channel/UCa5UazrsIcN7i_MoLcdJMWQ" OnMouseOver="text_out('pic7')" onMouseOut="text_in('pic7')"><div id="Youtube"><p>Youtube</p></div></a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="contact.html" OnMouseOver="text_out('pic5')" onMouseOut="text_in('pic5')"><img src="Images/Web Page Icons/Contact Us Icon.png" alt="Contact Us" name="pic5" id="pic5" border="0"/></a>
+					</td>
+					<td>
+						<a href="contact.html" OnMouseOver="text_out('pic5')" onMouseOut="text_in('pic5')"><div id="Contact Us"><p>Contact Us</p></div></a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="about.html" OnMouseOver="text_out('pic6')" onMouseOut="text_in('pic6')"><img src="Images/Web Page Icons/About Us Icon.png" alt="About Us" name="pic6" id="pic6" border="0"/></a>
+					</td>
+					<td>
+						<a href="about.html" OnMouseOver="text_out('pic6')" onMouseOut="text_in('pic6')"><div id="About Us"><p>About Us</p></div></a>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<table id="top">
+			<thead>
+					
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<img src="Images/Main Images/Multiverse Game Studios Logo.png" top="0"/>
+						<img src="Images/Main Images/Multiverse Title.png" top="0"/>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<table id="center">
+			<thead>
+			
+			</thead>	
+			<tbody>
+				<tr>
+					<td id="side">
+						<p>THis is a test what is going on</p>
+					</td>
+					<td id="body">
+						<table>
+							<thead>
+							
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<img src="Images/Puzzles/Puzzle 5.png" width="800" height="500" alt="Puzzle 1" />
+										<form>
+											<input id="submit" type="button" value="Submit Answer" onclick="check_Answer();" />
+										</form>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<table id="bottom">
+			<thead>		
+	
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>

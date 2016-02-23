@@ -1,0 +1,197 @@
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	padding-left: 0px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+}
+
+table {
+	width: 100%;
+	border: 0px;
+}
+
+td {
+	vertical-align: top;
+}
+
+h5 {
+	color: white;
+}
+
+#top {
+	height: 60px;
+	background-color: #000000;
+	margin-left: 0px;
+	margin-top: 0px;
+	top:0px;
+	left:0px;
+	cellpadding: 0px;
+	position: fixed;
+}
+
+#center {
+	margin-top: 74px;
+	height: 1000px;
+	border: 0px;
+	background-color: black;
+}
+
+#side {
+	width: 70px;
+	background-color: #000000;
+}
+
+#sideBar {
+	border: 0px;
+	background-color: #000000;
+}
+
+#body {
+	background-color: #000000;
+	background-image: url("Images/Main Images/Background.png");
+	color: white;
+	font-family: sans-serif;
+}
+
+#body img {
+	text-align: right;
+}
+#bottom {
+	height: 50px;
+	background-color: #000011;
+}
+
+.flip{
+	background-color:black;	
+}
+
+.fronting{
+	z-index: 2; 
+	position:relative;
+}
+
+.backing{
+	z-index: 1; 
+	position:relative;
+}
+
+.none{
+
+} 
+
+.card-container {
+	height: 290px;
+	perspective: 600;
+	position: relative;
+	width: 310px;
+	z-index: 1; 
+}
+.card {
+	height: 100%;
+	position: absolute;
+	transform-style: preserve-3d;
+	transition: all 1s ease-in-out;
+	width: 100%;
+}
+.card:hover {
+	transform: rotateY(180deg);
+}
+
+.card .side {
+	backface-visibility: hidden;
+	height: 100%;
+	position: absolute;
+	width: 100%;
+}
+
+.card .back {
+	background-color: black;
+	text-align: center;
+	transform: rotateY(180deg);
+}
+
+.divbar{
+	position: absolute;
+	top:50px;
+	left:0px;
+	z-index: 2;   
+}
+.divs {
+	//position: absolute;
+	font-family: sans-serif;
+	top: 74px;
+	left: 0px;
+	z-index: 2;     
+	width: 70px;
+	height: 999px;
+	background: black;
+	color: white;
+	margin-left: -5px;
+	-webkit-transition: all width .5s; 
+	-moz-transition: all .5s; 
+	transition: width .5s;
+	position: fixed;
+	//text-align: left;
+}
+
+.divs p {
+	display: inline-block;
+	position: absolute;
+	right:10px;
+	z-index: -1;
+	clear: none;
+	text-align: center;
+}
+.p {
+	color:rgb(255,255,255);
+}
+
+.divs:hover {	
+	width: 175px;
+	background-color: rgba(0,0,0,.75)
+}
+
+.Black {
+	background-color: #000;
+	color: #FFF;
+}
+.Grey {
+	background-color: #2d3137;
+	color: #FFF;
+	vertical-align: middle;
+}
+
+a:link {
+	color: #FFFFFF;
+}
+
+a:visited {
+	color: #FFFFFF;
+}
+
+a:hover {
+	color: #FFFFFF;
+}
+
+a:active {
+	color: #FFFFFF;
+}
+a:link {
+	text-decoration: none;
+}
+
+a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+a:active {
+	text-decoration: none;
+}
