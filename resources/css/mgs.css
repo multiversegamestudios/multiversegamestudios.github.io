@@ -1,0 +1,73 @@
+.mgs-black,.mgs-hover-black:hover{color:#fff!important;background-color:#2B3E42!important}
+.mgs-text-black,.mgs-hover-text-black:hover{color:#2B3E42!important}
+.mgs-border-black,.mgs-hover-border-black:hover{border-color:#2B3E42!important}
+
+.mgs-orange,.mgs-hover-orange:hover{color:#000!important;background-color:#F2583E!important}
+.mgs-text-orange,.mgs-hover-text-orange:hover{color:#F2583E!important}
+.mgs-border-orange,.mgs-hover-border-orange:hover{border-color:#F2583E!important}
+
+.mgs-blue,.mgs-hover-blue:hover{color:#000!important;background-color:#77BED2!important}
+.mgs-text-blue,.mgs-hover-text-blue:hover{color:#77BED2!important}
+.mgs-border-blue,.mgs-hover-border-blue:hover{border-color:#77BED2!important}
+
+.mgs-silver,.mgs-hover-silver:hover{color:#000!important;background-color:#D5D1DD!important}
+.mgs-text-silver,.mgs-hover-text-silver:hover{color:#D5D1DD!important}
+.mgs-border-silver,.mgs-hover-border-silver:hover{border-color:#D5D1DD!important}
+
+.mgs-gray,.mgs-hover-gray:hover{color:#000!important;background-color:#747E80!important}
+.mgs-text-gray,.mgs-hover-text-gray:hover{color:#747E80!important}
+.mgs-border-gray,.mgs-hover-border-gray:hover{border-color:#747E80!important}
+
+html, body{height: 100%;}
+
+.mgs-height-32px{height: 32px;}
+.mgs-height-24px{height: 24px;}
+.mgs-height-16px{height: 16px;}
+.mgs-height-8px{height: 8px;}
+
+.mgs-width-32px{width: 32px;}
+.mgs-width-24px{width: 24px;}
+.mgs-width-16px{width: 16px;}
+.mgs-width-8px{width: 8px;}
+
+.mgs-height-100{height: 100%;}
+.mgs-height-95{height: 95%;}
+.mgs-height-90{height: 90%;}
+.mgs-height-85{height: 85%;}
+.mgs-height-80{height: 80%;}
+.mgs-height-75{height: 75%;}
+.mgs-height-70{height: 70%;}
+.mgs-height-65{height: 65%;}
+.mgs-height-60{height: 60%;}
+.mgs-height-55{height: 55%;}
+.mgs-height-50{height: 50%;}
+.mgs-height-45{height: 45%;}
+.mgs-height-40{height: 40%;}
+.mgs-height-35{height: 35%;}
+.mgs-height-30{height: 30%;}
+.mgs-height-25{height: 25%;}
+.mgs-height-20{height: 20%;}
+.mgs-height-15{height: 15%;}
+.mgs-height-10{height: 10%;}
+.mgs-height-5{height: 5%;}
+
+.mgs-width-100{width: 100%;}
+.mgs-width-95{width: 95%;}
+.mgs-width-90{width: 90%;}
+.mgs-width-85{width: 85%;}
+.mgs-width-80{width: 80%;}
+.mgs-width-75{width: 75%;}
+.mgs-width-70{width: 70%;}
+.mgs-width-65{width: 65%;}
+.mgs-width-60{width: 60%;}
+.mgs-width-55{width: 55%;}
+.mgs-width-50{width: 50%;}
+.mgs-width-45{width: 45%;}
+.mgs-width-40{width: 40%;}
+.mgs-width-35{width: 35%;}
+.mgs-width-30{width: 30%;}
+.mgs-width-25{width: 25%;}
+.mgs-width-20{width: 20%;}
+.mgs-width-15{width: 15%;}
+.mgs-width-10{width: 10%;}
+.mgs-width-5{width: 5%;}
