@@ -15,8 +15,8 @@ Module.expectedDataFileDownloads++;
       // worker
       PACKAGE_PATH = encodeURIComponent(location.pathname.toString().substring(0, location.pathname.toString().lastIndexOf('/')) + '/');
     }
-    var PACKAGE_NAME = 'Freefall build 1.3.data';
-    var REMOTE_PACKAGE_BASE = 'Freefall build 1.3.data';
+    var PACKAGE_NAME = 'freefall_build_1.3.data';
+    var REMOTE_PACKAGE_BASE = 'freefall_build_1.3.data';
     if (typeof Module['locateFilePackage'] === 'function' && !Module['locateFile']) {
       Module['locateFile'] = Module['locateFilePackage'];
       Module.printErr('warning: you defined Module.locateFilePackage, that has been renamed to Module.locateFile (using your locateFilePackage for now)');
@@ -158,10 +158,10 @@ Module['FS_createPath']('/', 'Resources', true, true);
           DataRequest.prototype.requests["/sharedassets3.assets"].onload();
           DataRequest.prototype.requests["/Resources/unity_default_resources"].onload();
           DataRequest.prototype.requests["/Resources/unity_builtin_extra"].onload();
-          Module['removeRunDependency']('datafile_Freefall build 1.3.data');
+          Module['removeRunDependency']('datafile_freefall_build_1.3.data');
 
     };
-    Module['addRunDependency']('datafile_Freefall build 1.3.data');
+    Module['addRunDependency']('datafile_freefall_build_1.3.data');
   
     if (!Module.preloadResults) Module.preloadResults = {};
   
