@@ -1,11 +1,37 @@
 <html>
     <head>
-        <link rel="shortcut icon" href="../../resources/images/icon.ico" >
-	    <title>Multiverse Game Studios | Ionic</title>
-        <link rel="stylesheet" href="../../resources/css/mgs.css">
-        <link rel="stylesheet" href="../../resources/css/w3.css">
+        <link rel="shortcut icon" href="../../../resources/images/icon.ico" >
+        <title>Multiverse Game Studios | Ionic</title>
+        <link rel="stylesheet" href="../../../resources/css/mgs.css">
+        <link rel="stylesheet" href="../../../resources/css/w3.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="resources/js/common.js"></script>
+        <link rel="stylesheet" href="TemplateData/style.css">
+        <script src="TemplateData/UnityProgress.js"></script>
+        <script type="text/javascript">
+            function MM_preloadImages()
+            {
+                var d=document; 
+                if(d.images)
+                {
+                    if(!d.MM_p) 
+                    {			
+                        d.MM_p=new Array();
+                        var i
+                        var j=d.MM_p.length
+                        var a=MM_preloadImages.arguments; 
+                        for(i=0; i<a.length; i++)
+                        {
+                            if (a[i].indexOf("#")!=0)
+                            { 
+                                d.MM_p[j]=new Image; 
+                                d.MM_p[j++].src=a[i];
+                            }
+                        }
+                    }
+                }
+            }
+        </script>
     </head>
     <body class="mgs-black">
         <!-- begin nav bar -->
@@ -39,14 +65,99 @@
         <div>
             <!-- begin content -->
             <div class="mgs-width-100 w3-padding-16 w3-container">
-                <h1 class="mgs-text-blue">Lorem Ipsum 1</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                <h1 class="mgs-text-blue">Lorem Ipsum 2</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                <h1 class="mgs-text-blue">Lorem Ipsum 3</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                <h1 class="mgs-text-blue">Lorem Ipsum 4</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                <h1 class="mgs-text-blue">About Ionic</h1>
+                <p>Ionic is a simple puzzle game about navigating an electron through various atoms. Jump from atom to atom and try to make it to the quantum tunnel at the end!</p>
+                <p class="header"><span>Unity WebGL Player | </span>Ionic Unity</p>
+                <div class="template-wrap clear" style="top:320px;">
+                    <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="600px" width="960px"></canvas>
+                    <div class="logo"></div>
+                    <div class="fullscreen"><img src="TemplateData/fullscreen.png" width="38" height="38" alt="Fullscreen" title="Fullscreen" onclick="SetFullscreen(1);" /></div>
+                    <div class="title">Ionic Unity</div>
+                </div>
+                <p class="footer">&laquo; created with <a href="http://unity3d.com/" title="Go to unity3d.com">Unity</a> &raquo;</p>
+                <script type='text/javascript'>
+                    var Module = {
+                        filePackagePrefixURL: "Release/",
+                        memoryInitializerPrefixURL: "Release/",
+                        preRun: [],
+                        postRun: [],
+                        print: (function() {
+                            return function(text) {
+                                console.log (text);
+                            };
+                        })(),
+                        printErr: function(text) {
+                            console.error (text);
+                        },
+                        canvas: document.getElementById('canvas'),
+                        progress: null,
+                        setStatus: function(text) {
+                            if (this.progress == null) 
+                            {
+                                if (typeof UnityProgress != 'function')
+                                    return;
+                                this.progress = new UnityProgress (canvas);
+                            }
+                            if (!Module.setStatus.last) Module.setStatus.last = { time: Date.now(), text: '' };
+                            if (text === Module.setStatus.text) return;
+                            this.progress.SetMessage (text);
+                            var m = text.match(/([^(]+)\((\d+(\.\d+)?)\/(\d+)\)/);
+                            if (m)
+                            this.progress.SetProgress (parseInt(m[2])/parseInt(m[4]));
+                            if (text === "") 
+                            this.progress.Clear()
+                        },
+                        totalDependencies: 0,
+                        monitorRunDependencies: function(left) {
+                            this.totalDependencies = Math.max(this.totalDependencies, left);
+                            Module.setStatus(left ? 'Preparing... (' + (this.totalDependencies-left) + '/' + this.totalDependencies + ')' : 'All downloads complete.');
+                        }
+                    };
+                    Module.setStatus('Downloading (0.0/1)');
+                </script>
+                    <script src="Release/UnityConfig.js"></script>
+                <script src="Release/fileloader.js"></script>
+                <script>
+                    if (!(!Math.fround)) {
+                        var script = document.createElement('script');
+                        script.src = "Release/ionic%20build%201.4.js";
+                        document.body.appendChild(script);
+                    } else {
+                        var codeXHR = new XMLHttpRequest();
+                        codeXHR.open('GET', 'http://multiversegamestudios.com/pages/games/ionic/Release/ionic%20build%201.4.js', true);
+                        codeXHR.onload = function() {
+                            var code = codeXHR.responseText;
+                            if (!Math.fround) { 
+                                try {
+                                    console.log('optimizing out Math.fround calls');
+                                    var m = /var ([^=]+)=global\.Math\.fround;/.exec(code);
+                                    var minified = m[1];
+                                    if (!minified) throw 'fail';
+                                    var startAsm = code.indexOf('// EMSCRIPTEN_START_FUNCS');
+                                    var endAsm = code.indexOf('// EMSCRIPTEN_END_FUNCS');
+                                    var asm = code.substring(startAsm, endAsm);
+                                    do {
+                                        var moar = false; // we need to re-do, as x(x( will not be fixed
+                                        asm = asm.replace(new RegExp('[^a-zA-Z0-9\\$\\_]' + minified + '\\(', 'g'), function(s) { moar = true; return s[0] + '(' });
+                                    } while (moar);
+                                    code = code.substring(0, startAsm) + asm + code.substring(endAsm);
+                                    code = code.replace("'use asm'", "'almost asm'");
+                                } catch(e) { console.log('failed to optimize out Math.fround calls ' + e) }
+                            }
+
+                            var blob = new Blob([code], { type: 'text/javascript' });
+                            codeXHR = null;
+                            var src = URL.createObjectURL(blob);
+                            var script = document.createElement('script');
+                            script.src = URL.createObjectURL(blob);
+                            script.onload = function() {
+                                URL.revokeObjectURL(script.src);
+                            };
+                            document.body.appendChild(script);
+                        };
+                        codeXHR.send(null);
+                    }
+                </script>
             </div>
             <!-- end content -->
             <!-- begin footer -->
